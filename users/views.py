@@ -2,6 +2,7 @@ from users.forms import CustomSignupForm
 from django.urls import reverse_lazy
 from django.views import generic
 from django.contrib.auth import authenticate, login
+from django.shortcuts import render
 
 
 class SignUp(generic.CreateView):
@@ -16,3 +17,7 @@ class SignUp(generic.CreateView):
         new_user = authenticate(username=username, password=password)
         login(self.request, new_user)
         return valid
+
+
+def settings(request):
+    return render(request, 'registration/settings.html')

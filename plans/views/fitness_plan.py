@@ -21,7 +21,3 @@ def join(request):
 
 def checkout(request):
     return render(request, 'plans/checkout.html')
-
-
-def settings(request):
-    return render(request, 'registration/settings.html')
