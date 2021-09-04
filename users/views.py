@@ -20,4 +20,4 @@ class SignUp(generic.CreateView):
 
 
 def settings(request):
-    return render(request, 'registration/settings.html')
+    return render(request, 'users/settings.html')
